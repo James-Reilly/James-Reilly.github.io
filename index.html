@@ -60,62 +60,32 @@ core-toolbar {
 
 </head>
 
-<body unresolved>
+<body fullbleed vertical layout unresolved>
      <core-scaffold>
 
-  <nav>
-    <core-toolbar><span>Single Page Polymer</span></core-toolbar>
-    <core-menu selected="1">
-      <paper-item noink>
-        <core-icon icon="label-outline"></core-icon>
-        <a href="#one">Single</a>
-      </paper-item>
-      <paper-item noink>
-        <core-icon icon="label-outline"></core-icon>
-        <a href="#two">page</a>
-      </paper-item>
-      <paper-item noink>
-        <core-icon icon="label-outline"></core-icon>
-        <a href="#three">app</a>
-      </paper-item>
-      <paper-item noink>
-        <core-icon icon="label-outline"></core-icon>
-        <a href="#four">using</a>
-      </paper-item>
-      <paper-item noink>
-        <core-icon icon="label-outline"></core-icon>
-        <a href="#five">Polymer</a>
-      </paper-item>
+  <core-header-panel navigation flex>
+    <core-toolbar id="navheader">
+      <span>Menu</span>
+    </core-toolbar>
+    <core-menu>
+      <core-item label="One"></core-item>
+      <core-item label="Two"></core-item>
     </core-menu>
-  </nav>
+  </core-header-panel>
 
-  <core-toolbar tool flex>
-    <div flex></div>
-    <core-icon-button icon="refresh"></core-icon-button>
-    <core-icon-button icon="add"></core-icon-button>
-  </core-toolbar>
+  <span tool>Title</span>
 
-  <div layout horizontal center-center fit>
-    <core-animated-pages id="pages" selected="1">
-      <section layout vertical center-center>
-        <div>Single</div>
-      </section>
-      <section layout vertical center-center>
-        <div>page</div>
-      </section>
-      <section layout vertical center-center>
-        <div>app</div>
-      </section>
-      <section layout vertical center-center>
-        <div>using</div>
-      </section>
-      <section layout vertical center-center>
-        <div>Polymer</div>
-      </section>
-    </core-animated-pages>
+  <div class="content">
+      If drawer is hidden, press button to display drawer.
   </div>
-
 </core-scaffold>
+<script>
+	var tabs = document.querySelector('paper-tabs');
+
+	tabs.addEventListener('core-select', function() {
+		console.log("Selected: " + tabs.selected);
+	});
+</script>
 
 </body>
 
