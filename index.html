@@ -61,7 +61,9 @@ core-toolbar {
 </head>
 
 <body unresolved>
-     <nav>
+     <core-scaffold>
+
+  <nav>
     <core-toolbar><span>Single Page Polymer</span></core-toolbar>
     <core-menu selected="1">
       <paper-item noink>
@@ -86,38 +88,34 @@ core-toolbar {
       </paper-item>
     </core-menu>
   </nav>
-	<core-header-panel>
 
-	<core-toolbar>
-		<paper-tabs id="tabs" selected="all" self-end>
-		<paper-tab name="all">All</paper-tab>
-		<paper-tab name="favorites">Favorites</paper-tab>
-	</paper-tabs>
-	</core-toolbar>
+  <core-toolbar tool flex>
+    <div flex></div>
+    <core-icon-button icon="refresh"></core-icon-button>
+    <core-icon-button icon="add"></core-icon-button>
+  </core-toolbar>
 
-	<!-- main page content will go here -->
-     <div class="container" layout vertical center>
+  <div layout horizontal center-center fit>
+    <core-animated-pages id="pages" selected="1">
+      <section layout vertical center-center>
+        <div>Single</div>
+      </section>
+      <section layout vertical center-center>
+        <div>page</div>
+      </section>
+      <section layout vertical center-center>
+        <div>app</div>
+      </section>
+      <section layout vertical center-center>
+        <div>using</div>
+      </section>
+      <section layout vertical center-center>
+        <div>Polymer</div>
+      </section>
+    </core-animated-pages>
+  </div>
 
-       <post-card>
-         <img width="70" height="70"
-           src="../images/avatar-07.svg">
-         <h2>James Reilly</h2>
-         <p>Computer Scientist at RIT</p>
-         <p>Testing how long of text I can add to this card.
-              Testing 12345678910
-              Testing
-              Testing is this thing working okay?</p>
-       </post-card>
-
-     </div>
-</core-header-panel>
-<script>
-	var tabs = document.querySelector('paper-tabs');
-
-	tabs.addEventListener('core-select', function() {
-		console.log("Selected: " + tabs.selected);
-	});
-</script>
+</core-scaffold>
 
 </body>
 
