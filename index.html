@@ -18,7 +18,7 @@
 	href="../components/core-toolbar/core-toolbar.html">
 <link rel="import"
 	href="../components/paper-tabs/paper-tabs.html">
-
+     <link rel="import" href="post-card.html">
   <style>
   html,body {
     height: 100%;
@@ -71,7 +71,16 @@ core-toolbar {
 	</core-toolbar>
 
 	<!-- main page content will go here -->
+     <div class="container" layout vertical center>
 
+       <post-card>
+         <img width="70" height="70"
+           src="../images/avatar-07.svg">
+         <h2>Another Developer</h2>
+         <p>I'm composing with shadow DOM!</p>
+       </post-card>
+
+     </div>
 </core-header-panel>
 <script>
 	var tabs = document.querySelector('paper-tabs');
