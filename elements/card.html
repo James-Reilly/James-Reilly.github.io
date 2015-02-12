@@ -1,0 +1,35 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+
+<polymer-element name="post-card">
+    <template>
+        <style>
+            :host {
+                display: block;
+                position: relative;
+                background-color: white;
+                padding: 20px;
+                min-width: 480px;
+
+                font-weight: 300;
+            }
+            .card-header {
+                margin-bottom: 10px;
+            }
+            polyfill-next-selector { content: '.card-header h1'; }
+            .card-header ::content h1 {
+                margin: 0;
+
+                font-weight: 300;
+            }
+
+        </style>
+        <div class="card-header" layout horizontal center>
+            <content select="h1"></content>
+        </div>
+        <content></content>
+    </template>
+    <script>
+        Polymer({});
+    </script>
+</polymer-element>

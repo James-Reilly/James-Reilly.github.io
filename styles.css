@@ -1,0 +1,43 @@
+body {
+    font-family: sans-serif;
+
+}
+
+.container {
+    padding: 20px;
+}
+#aboutimg{
+    padding-top:20px;
+    padding-bottom:20px;
+    padding-right: 20px;
+    width:60%;
+}
+
+
+core-menu {
+    color: #01579b;
+
+}
+
+body /deep/ core-toolbar {
+    background-color: #1565C0;
+    color: #ffffff;
+}
+
+core-header-panel{
+    background-color: #ffffff;
+}
+
+
+
+#tabs {
+    width: 100%;
+    margin: 0;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    text-transform: uppercase;
+}
+
+

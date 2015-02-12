@@ -1,2 +1,87 @@
-<h3>James Reilly</h3>
-<p>This website is currently under construction</p>
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title>James Michael Reilly</title>
+        <script
+                src="./bower_components/webcomponentsjs/webcomponents.js">
+        </script>
+        <link rel="import" href="elements.html">
+        <link rel="stylesheet" href="styles.css">
+
+    </head>
+    <body unresolved>
+        <template is="auto-binding" id="app">
+
+            <core-scaffold id="scaffold">
+
+                <core-header-panel navigation flex>
+                    <core-toolbar id="navheader">Menu</core-toolbar>
+                    <core-menu selected="{{page}}" valueattr="data-category">
+                        <core-item data-category="about" label="About Me"></core-item>
+                        <core-item data-category="projects" label="Projects"></core-item>
+                        <core-item data-category="resume" label="Resume"></core-item>
+                    </core-menu>
+                </core-header-panel>
+
+                <span tool id="title">James Reilly</span>
+
+                <div class="container" fit layout vertical>
+                    <core-animated-pages selected="{{page}}" valueattr="data-category"  transitions="slide-from-right">
+                        <section data-category="about">
+                            <about-card>
+                                <img src="./Media/Page-Banner.png" style="height: 100%; width: 100%;">
+                                <b><h1>About Me</h1></b>
+                                <p>Hello my name is James Reilly. <br/>I'm a second year Computer Science Student
+                                at Rochester Institute of Technology</p>
+                            </about-card>
+                        </section>
+                        <section data-category="projects">
+
+                                <core-toolbar>
+
+                                    <paper-tabs id="tabs" selected="{{project}}" valueattr="project-name" self-end>
+                                        <paper-tab project-name="JTweet">JTweet</paper-tab>
+                                        <paper-tab project-name="SimpleCalc">SimpleCalc</paper-tab>
+                                        <paper-tab project-name="Gobblet">Gobblet</paper-tab>
+                                    </paper-tabs>
+
+                                </core-toolbar>
+
+                                <div class="p-container">
+                                    <core-animated-pages selected="{{project}}" valueattr="project-name"  transitions="slide-from-right">
+                                        <section project-name="JTweet">
+                                            <post-card>
+                                                <p>JTweet</p>
+                                            </post-card>
+
+                                        </section>
+                                        <section project-name="SimpleCalc">
+                                            <post-card>
+                                                <p>Simple Calc</p>
+                                            </post-card>
+
+                                        </section>
+                                        <section project-name="Gobblet">
+                                            <post-card>
+                                                <p>Gobblet</p>
+                                            </post-card>
+
+                                        </section>
+                                    </core-animated-pages>
+                                </div>
+
+                        </section>
+                        <section data-category="resume">
+                            <my-resume></my-resume>
+                        </section>
+                    </core-animated-pages>
+                </div>
+            </core-scaffold>
+
+        </template>
+
+
+        <script src="app.js"></script>
+    </body>
+</html>
