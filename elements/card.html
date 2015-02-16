@@ -22,10 +22,20 @@
 
                 font-weight: 300;
             }
+            polyfill-next-selector { content: '.card-header h4'; }
+            .card-header ::content h4 {
+              margin: 0;
+              font-weight: 300;
+              position: absolute;
+            right: 10px;
+            top: 15px;
+            
+            }
 
         </style>
         <div class="card-header" layout horizontal center>
             <content select="h1"></content>
+            <content select="h4"></content>
         </div>
         <content></content>
     </template>

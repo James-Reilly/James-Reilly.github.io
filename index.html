@@ -39,7 +39,7 @@
                         </section>
                         <section data-category="projects">
 
-                                <core-toolbar>
+                                <core-toolbar id="tab-bar">
 
                                     <paper-tabs id="tabs" selected="{{project}}" valueattr="project-name" self-end>
                                         <paper-tab project-name="JTweet">JTweet</paper-tab>
@@ -52,20 +52,15 @@
                                 <div class="p-container">
                                     <core-animated-pages selected="{{project}}" valueattr="project-name"  transitions="slide-from-right">
                                         <section project-name="JTweet">
-                                            <post-card>
-                                                <p>JTweet</p>
-                                            </post-card>
-
+                                            <my-tweet></my-tweet>
                                         </section>
                                         <section project-name="SimpleCalc">
-                                            <post-card>
-                                                <p>Simple Calc</p>
-                                            </post-card>
-
+                                            <my-calc></my-calc>
                                         </section>
                                         <section project-name="Gobblet">
                                             <post-card>
-                                                <p>Gobblet</p>
+                                                <h3>Gobblet</h3>
+                                                <p>An artificial intelligence for the board game Goblet. Post coming soon.</p>
                                             </post-card>
 
                                         </section>
@@ -80,9 +75,11 @@
                 </div>
             </core-scaffold>
 
+
         </template>
-
-
         <script src="app.js"></script>
+
+        
+        
     </body>
 </html>
