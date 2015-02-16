@@ -37,5 +37,27 @@ core-header-panel{
 
 }
 
+.double-img{
+        display: table; /* shrink wrap the contents */
+        margin: 0 auto;
+}
+.triple-img{
+    
+    display: table; /* shrink wrap the contents */
+    margin: 0 auto;
+}
+
+.icon-style{
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.icon-box{
+    position: absolute; 
+    bottom: 20px;
+}
+
+
+
 
 
