@@ -16,12 +16,12 @@
 
             <core-scaffold id="scaffold">
 
-                <core-header-panel navigation flex>
+                <core-header-panel navigation flex>t
                     <core-toolbar id="navheader">Menu</core-toolbar>
                     <core-menu selected="{{page}}" valueattr="data-category">
-                        <core-item data-category="about" label="About Me"></core-item>
-                        <core-item data-category="projects" label="Projects"></core-item>
-                        <core-item data-category="resume" label="Resume"></core-item>
+                        <core-item onclick="document.querySelector('core-scaffold').togglePanel();" data-category="about" label="About Me"></core-item>
+                        <core-item onclick="document.querySelector('core-scaffold').togglePanel();" data-category="projects" label="Projects"></core-item>
+                        <core-item onclick="document.querySelector('core-scaffold').togglePanel();" data-category="resume" label="Resume"></core-item>
                         <div class="icon-box"> 
                             <div class="triple-img">
                                 <a class="icon-style" href="https://www.facebook.com/j.reilly777">
