@@ -1,6 +1,0 @@
-<div markdown="1" class="card-panel white">
-
-Content Coming Soon!
-=============
-
-</div>
