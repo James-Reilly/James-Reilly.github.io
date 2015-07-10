@@ -1,0 +1,31 @@
+<div markdown="1" class="card-panel white">
+
+**Changing the Database and Styling**
+=============
+##### 3/02/2015
+
+### Changing to Realm
+
+When implementing a SQLite database into JTweet I also though it was clunky.  RecyclerViews were designed to take in lists of data, not cursors.  When I kept getting unique idea errors I knew there had to be a batter way to cashes the timeline data.  I searched around and found Realm a mobile data basing software.  It is exactly what I was looking for, it stores the data in the data base and the queries of the database return a list of objects, so it would pair very well for with the RecyclerView. I gutted the code and not JTweet runs smoother than ever without any of the unique id errors.
+
+### Minor Styling Changes
+
+After adding this data I wanted to work a little on styling.  I found a gist of code that transforms Picasso images to circles so the profile images would look a lot nicer.  I also added a profile card to display the user information of the profile that you are viewing.  It is very basic, but getting it to load at the top of the RecyclerView took a little bit of time to implement.
+
+
+![alt text](../media/JTweet/newtimeline.png){: class="responsive-img col s4 offset-s2" }
+![alt text](../media/JTweet/newprofile.png){: class="responsive-img col s4 offset-s1" }
+{: class="row" }
+
+
+
+I also used this method to include the current users profile image and banner in the navigation drawer.
+
+
+![alt text](../media/JTweet/nav.png){: class="responsive-img col s6 offset-s3" }
+{: class="row" }
+
+
+Now that all the timeline errors are fixed I feel like the timeline is functional enough to start working on other features that are need for this to be a fully functional app.
+
+</div>
