@@ -1,0 +1,38 @@
+
+
+
+
+.parallax-container {
+    height: 400px;
+}
+
+.prj-li{
+	height: 40px;
+}
+
+.prj-a{
+	margin-left: 20px;
+}
+.prj-header{
+	margin-left: 30px;
+}
+
+.logo-fix{
+	margin-left: 20px;
+}
+.odd{
+	padding-top: 20px;
+	background: #EEEEEE;
+}
+
+.blend {
+    background: #455a64;
+    display: inline-block;
+}
+.blend img {
+	opacity: 0.5;
+}
+
+body{
+	background: #eeeeee
+}

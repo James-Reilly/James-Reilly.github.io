@@ -1,0 +1,20 @@
+A File Containing the code to hold certain types of images in markdown notation
+
+
+Single Image Markdown Block Code
+
+![alt text](../media/url){: class="responsive-img col s6 offset-s3" }
+{: class="row" }
+
+Double Image Markdown Block Code
+
+![alt text](../media/url){: class="responsive-img col s4 offset-s2" }
+![alt text](../media/url){: class="responsive-img col s4 offset-s1" }
+{: class="row" }
+
+Triple Image Markdown Block Code
+
+![alt text](../media/url){: class="responsive-img col s3" }
+![alt text](../media/url){: class="responsive-img col s3 offset-s1" }
+![alt text](../media/url){: class="responsive-img col s3 offset-s1" }
+{: class="row" }
