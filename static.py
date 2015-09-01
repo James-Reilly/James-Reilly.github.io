@@ -15,11 +15,12 @@ def convert_to_html(filename, path):
 def main():
 	textPath = "markdownProjects"
 	htmlPath = "projects"
-	tempPath = "templates"
+	componentPath = "components"
+	headerPath ="headers"
 	prjNames = getProjectNames(textPath)
 	for prj in prjNames:
 		html = getPostsHtml(textPath, prj)
-		addContent(tempPath, htmlPath, prj, html)
+		addContent(componentPath, headerPath, htmlPath, prj, html)
 
 
 def getPostsHtml(path, projectName):
@@ -36,10 +37,22 @@ def getProjectNames(path):
 			projectNames.append(direct)
 	return projectNames
 
-def addContent(templatePath, projectPath, projectName, html):
-	templateFile = open(templatePath +"/"+ projectName + "Template.html", 'r')
+def addContent(componentPath, headerPath, projectPath, projectName, html):
+	#Open all the compnents needed to create a project page
+	templateFile = open(componentPath + "/projectShell.html", 'r')
+	navbarFile = open(componentPath + "/navbar.html", 'r')
+	footerFile = open(componentPath + "/footer.html", 'r')
+	headerFile = open(headerPath + "/" + projectName + "Header.html", 'r')
+	#Read all the date from the files
+	header = headerFile.read()
+	navbar = navbarFile.read()
+	footer = footerFile.read()
 	data = templateFile.read()
+
 	data = data.replace("[content]", html)
+	data = data.replace("[navbar]", navbar)
+	data = data.replace("[header]", header)
+	data = data.replace("[footer]", footer)
 	outputFile = open(projectPath +"/"+ projectName + ".html", 'w')
 	outputFile.write(data)
 
