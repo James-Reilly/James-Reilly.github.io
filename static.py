@@ -1,5 +1,5 @@
 import markdown
-import os 
+import os
 '''
 This file is to convert my markdown posts into the appropriate HTMl pages
 author @James Reilly
@@ -13,7 +13,7 @@ def convert_to_html(filename, path):
 	return html
 
 def main():
-	textPath ="markdownProjects"
+	textPath = "markdownProjects"
 	htmlPath = "projects"
 	tempPath = "templates"
 	prjNames = getProjectNames(textPath)
@@ -22,7 +22,7 @@ def main():
 		addContent(tempPath, htmlPath, prj, html)
 
 
-def getPostsHtml(path, projectName): 
+def getPostsHtml(path, projectName):
 	myhtml = ""
 	for fn in os.listdir("./" + path +'/'+ projectName):
 		if(fn.endswith(".txt")):
@@ -42,5 +42,5 @@ def addContent(templatePath, projectPath, projectName, html):
 	data = data.replace("[content]", html)
 	outputFile = open(projectPath +"/"+ projectName + ".html", 'w')
 	outputFile.write(data)
-main()
 
+main()
