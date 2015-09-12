@@ -1,0 +1,16 @@
+2015-09-12
+<div markdown="1" class="card-panel white">
+
+**MyTime**
+=============
+##### 9/12/2015
+
+### Introduction
+Over this past summer I worked at a startup called mySpiderweb and we needed a way to keep track of our hours, but we wanted to know how much time we were putting in compared to the other employees. We looked around found products that were either too pricey or did not have the features we wanted.
+
+### Implementation
+I took it upon myself the create this program not only to solve our problem, but to learn more about Meteor.js, the framework I would be using all summer.  I used the facebook login package to authenticate users because facebook has the easiest way to access user's images and that was important for the application.
+
+For the back-end I created a database to store "timecards" that would store the total time a user was clocked in.  This time was incremented when every minute the server would check if there were any users clocked in and if they were it would add a minute to their total time.  I knew this was not the most efficient method, but it allowed for real time updating of the leaderboard which is something that I wanted for this application. Later I found out that if you host a Meteor application on Meteor's servers it deallocates resources to the application if the traffic was low, which led to inaccurate times.
+
+</div>

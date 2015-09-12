@@ -1,16 +1,29 @@
 import markdown
+import datetime
 import os
 '''
 This file is to convert my markdown posts into the appropriate HTMl pages
 author @James Reilly
 '''
 
+class ProjectPost:
+	def __init__(self, date, html):
+		self.date = date
+		self.html = html
 
 def convert_to_html(filename, path):
 	input_file = open(path + "/" + filename, 'r')
-	text = input_file.read()
+	date = ""
+	text = ""
+	first = True
+	for line in input_file:
+		if(first):
+			date = line.strip()
+			first = False
+		else:
+			text += line
 	html = markdown.markdown(text, ['markdown.extensions.extra', 'markdown.extensions.attr_list'])
-	return html
+	return ProjectPost(date, html)
 
 def main():
 	textPath = "markdownProjects"
@@ -25,9 +38,15 @@ def main():
 
 def getPostsHtml(path, projectName):
 	myhtml = ""
-	for fn in os.listdir("./" + path +'/'+ projectName):
+	curPath = "./" + path +'/'+ projectName;
+	postList = []
+	for fn in os.listdir(curPath):
 		if(fn.endswith(".txt")):
-			myhtml += convert_to_html(fn, path + "/" + projectName)
+			postList.append(convert_to_html(fn, path + "/" + projectName))
+	#sort by date
+	postList.sort(key=lambda post: datetime.datetime.strptime(post.date, '%Y-%m-%d'), reverse=True)
+	for post in postList:
+		myhtml += post.html
 	return myhtml
 
 def getProjectNames(path):
@@ -49,10 +68,12 @@ def addContent(componentPath, headerPath, projectPath, projectName, html):
 	footer = footerFile.read()
 	data = templateFile.read()
 
+	#replace tags with acutal content
 	data = data.replace("[content]", html)
 	data = data.replace("[navbar]", navbar)
 	data = data.replace("[header]", header)
 	data = data.replace("[footer]", footer)
+	#write the data to the apporiate files
 	outputFile = open(projectPath +"/"+ projectName + ".html", 'w')
 	outputFile.write(data)
 

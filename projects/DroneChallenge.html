@@ -48,7 +48,16 @@
       <div class="section">
         <div class="container">
             <div class="card-panel white">
-<h1>Content Coming Soon!</h1>
+<h1><strong>Imagine RIT 2015 Flying Cars Challenge</strong></h1>
+<h5>9/12/2015</h5>
+<h3>Introduction</h3>
+<p>I recently participated in a team autonomous drone challenge for the RIT Meet the Jetsons Event during Imagine RIT. Our drone would perform aerial maneuvers upon recognition of a Jetson Character.  Our team placed 2nd overall in the competition and won a 125 year old antique banjo from the private collection of the President of RIT, Bill Destler.</p>
+<p class="row"><img alt="alt text" class="responsive-img col s6 offset-s3" src="../media/dronechallenge/banjo.jpg" title="Me posing with the prize" /></p>
+<h3>Classifier</h3>
+<p>In order to detect and Image in OpenCV we needed a Haar Classifier. Unfortunately none of us had any knowledge of how to do this so we received some help from our friend Trevor Sherrad's <a href="http://www.trevorsherrard.com/Haar_training.html">Haar Cascade Classifier Training Tutorial</a></p>
+<p>In order to do this we had to take a least 40 images of every character we wanted to classify with various lightings and backgrounds. After some changes to aspect ratio, resolution and cropping of the images we finally had an image set that would classify in a reasonable amount of time. We found that 20 passes was the optimal for our project and that took about 7 hours to generate.</p>
+<h3>Node.js</h3>
+<p>In order to control the drone we used the Node AR Drone which is a nice Library that provides commands to control the drone in Node.js.  We also used Node OpenCV which allowed us to use our classifier with the drone.  We ran into some issues with the image recognition because of false positives that would happen because or the noise of an image.  We solved this be creating a sort of buffer for each classifier.  If a classifier had 4 positive recognitions in a row then the drone would perform its maneuver. This cut out a lot of the random false positives that we got.</p>
 </div>
         </div>
       </div>

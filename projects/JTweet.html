@@ -48,6 +48,18 @@
       <div class="section">
         <div class="container">
             <div class="card-panel white">
+<h1><strong>Changing the Database and Styling</strong></h1>
+<h5>3/02/2015</h5>
+<h3>Changing to Realm</h3>
+<p>When implementing a SQLite database into JTweet I also though it was clunky.  RecyclerViews were designed to take in lists of data, not cursors.  When I kept getting unique idea errors I knew there had to be a batter way to cashes the timeline data.  I searched around and found Realm a mobile data basing software.  It is exactly what I was looking for, it stores the data in the data base and the queries of the database return a list of objects, so it would pair very well for with the RecyclerView. I gutted the code and not JTweet runs smoother than ever without any of the unique id errors.</p>
+<h3>Minor Styling Changes</h3>
+<p>After adding this data I wanted to work a little on styling.  I found a gist of code that transforms Picasso images to circles so the profile images would look a lot nicer.  I also added a profile card to display the user information of the profile that you are viewing.  It is very basic, but getting it to load at the top of the RecyclerView took a little bit of time to implement.</p>
+<p class="row"><img alt="alt text" class="responsive-img col s4 offset-s2" src="../media/JTweet/newtimeline.png" />
+<img alt="alt text" class="responsive-img col s4 offset-s1" src="../media/JTweet/newprofile.png" /></p>
+<p>I also used this method to include the current users profile image and banner in the navigation drawer.</p>
+<p class="row"><img alt="alt text" class="responsive-img col s6 offset-s3" src="../media/JTweet/nav.png" /></p>
+<p>Now that all the timeline errors are fixed I feel like the timeline is functional enough to start working on other features that are need for this to be a fully functional app.</p>
+</div><div class="card-panel white">
 <h1><strong>Initial Progress</strong></h1>
 <h5>2/16/2015</h5>
 <h3>Main Timeline Setup</h3>
@@ -68,10 +80,10 @@
 <p class="row"><img alt="alt text" class="responsive-img col s3" src="../media/JTweet/plain-tweet.png" />
 <img alt="alt text" class="responsive-img col s3 offset-s1" src="../media/JTweet/favorite.png" />
 <img alt="alt text" class="responsive-img col s3 offset-s1" src="../media/JTweet/re-tweet.png" /></p>
-<p>Next, a lot of tweets are conversations between users, so a thread view would be useful for a lot of users.  The problem is that the Twitter REST API does not give access to replies to a given tweet.  That is something I am going to revisit at another time. In the meantime it does give you the tweet that the current tweet is in reply to so by going up through the tweets in the conversation you can create a thread of tweets leading up until the initial tweet. </p>
+<p>Next, a lot of tweets are conversations between users, so a thread view would be useful for a lot of users.  The problem is that the Twitter REST API does not give access to replies to a given tweet.  That is something I am going to revisit at another time. In the meantime it does give you the tweet that the current tweet is in reply to so by going up through the tweets in the conversation you can create a thread of tweets leading up until the initial tweet.</p>
 <p class="row"><img alt="alt text" class="responsive-img col s6 offset-s3" src="../media/JTweet/replies.png" /></p>
 <h3>Composing a Tweet</h3>
-<p>It took me a long time to such a main feature because I was not sure how to implement it.  I knew for the tweet composition, I wanted a floating action button that would create a floating window that would hover over the timeline. As I looked up how to implement a FAB (Floating action button) I found a library that had an easy to use interface that allows the button to be attached to a RecyclerView to appear and disappear while scrolling. </p>
+<p>It took me a long time to such a main feature because I was not sure how to implement it.  I knew for the tweet composition, I wanted a floating action button that would create a floating window that would hover over the timeline. As I looked up how to implement a FAB (Floating action button) I found a library that had an easy to use interface that allows the button to be attached to a RecyclerView to appear and disappear while scrolling.</p>
 <p>Once I had that working the next step was to figure out how to create a window.  After hours of research I found an example online on how to create a floating window.  I modified this example to have a edit text field and button to send the tweet.  I then hooked it up with Fabric and it worked flawlessly.  It was a little rough looking, but I can always style it later.</p>
 <p class="row"><img alt="alt text" class="responsive-img col s6 offset-s3" src="../media/JTweet/compose.png" /></p>
 <h3>Looking Ahead</h3>
@@ -81,18 +93,6 @@
 <li>Search Functionality</li>
 <li>More Material Design Styling&lt;</li>
 </ul>
-</div><div class="card-panel white">
-<h1><strong>Changing the Database and Styling</strong></h1>
-<h5>3/02/2015</h5>
-<h3>Changing to Realm</h3>
-<p>When implementing a SQLite database into JTweet I also though it was clunky.  RecyclerViews were designed to take in lists of data, not cursors.  When I kept getting unique idea errors I knew there had to be a batter way to cashes the timeline data.  I searched around and found Realm a mobile data basing software.  It is exactly what I was looking for, it stores the data in the data base and the queries of the database return a list of objects, so it would pair very well for with the RecyclerView. I gutted the code and not JTweet runs smoother than ever without any of the unique id errors.</p>
-<h3>Minor Styling Changes</h3>
-<p>After adding this data I wanted to work a little on styling.  I found a gist of code that transforms Picasso images to circles so the profile images would look a lot nicer.  I also added a profile card to display the user information of the profile that you are viewing.  It is very basic, but getting it to load at the top of the RecyclerView took a little bit of time to implement.</p>
-<p class="row"><img alt="alt text" class="responsive-img col s4 offset-s2" src="../media/JTweet/newtimeline.png" />
-<img alt="alt text" class="responsive-img col s4 offset-s1" src="../media/JTweet/newprofile.png" /></p>
-<p>I also used this method to include the current users profile image and banner in the navigation drawer.</p>
-<p class="row"><img alt="alt text" class="responsive-img col s6 offset-s3" src="../media/JTweet/nav.png" /></p>
-<p>Now that all the timeline errors are fixed I feel like the timeline is functional enough to start working on other features that are need for this to be a fully functional app.</p>
 </div>
         </div>
       </div>

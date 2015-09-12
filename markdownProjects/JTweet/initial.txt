@@ -1,3 +1,4 @@
+2015-02-16
 <div markdown="1" class="card-panel white">
 
 **Initial Progress**
@@ -52,7 +53,7 @@ The next feature that needed to be added was a retweet, favorite, and reply butt
 {: class="row" }
 
 
-Next, a lot of tweets are conversations between users, so a thread view would be useful for a lot of users.  The problem is that the Twitter REST API does not give access to replies to a given tweet.  That is something I am going to revisit at another time. In the meantime it does give you the tweet that the current tweet is in reply to so by going up through the tweets in the conversation you can create a thread of tweets leading up until the initial tweet. 
+Next, a lot of tweets are conversations between users, so a thread view would be useful for a lot of users.  The problem is that the Twitter REST API does not give access to replies to a given tweet.  That is something I am going to revisit at another time. In the meantime it does give you the tweet that the current tweet is in reply to so by going up through the tweets in the conversation you can create a thread of tweets leading up until the initial tweet.
 
 
 ![alt text](../media/JTweet/replies.png){: class="responsive-img col s6 offset-s3" }
@@ -61,7 +62,7 @@ Next, a lot of tweets are conversations between users, so a thread view would be
 
 ### Composing a Tweet
 
-It took me a long time to such a main feature because I was not sure how to implement it.  I knew for the tweet composition, I wanted a floating action button that would create a floating window that would hover over the timeline. As I looked up how to implement a FAB (Floating action button) I found a library that had an easy to use interface that allows the button to be attached to a RecyclerView to appear and disappear while scrolling. 
+It took me a long time to such a main feature because I was not sure how to implement it.  I knew for the tweet composition, I wanted a floating action button that would create a floating window that would hover over the timeline. As I looked up how to implement a FAB (Floating action button) I found a library that had an easy to use interface that allows the button to be attached to a RecyclerView to appear and disappear while scrolling.
 
 Once I had that working the next step was to figure out how to create a window.  After hours of research I found an example online on how to create a floating window.  I modified this example to have a edit text field and button to send the tweet.  I then hooked it up with Fabric and it worked flawlessly.  It was a little rough looking, but I can always style it later.
 
@@ -80,10 +81,3 @@ Now with classes starting up again my progress as slowed but these are the featu
 
 
 </div>
-
-
-
-
-
-
-
