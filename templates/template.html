@@ -1,0 +1,91 @@
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="theme-color" content="{{ color }}">
+	<title>{{ title }}</title>
+	<style>
+		a {color:{{ color }};}
+		.ripple {background: rgba({{ ripple_rgb }}, 0.4);}
+	</style>
+	<link href="css/style.css" rel="stylesheet" type="text/css">
+	<script src="js/jquery-3.1.0.min.js"></script>
+	<script src="js/script.js"></script>
+	<link rel="icon" type="image/png" href="{{ favicon }}">
+</head>
+
+<body>
+	<div style="background: {{ color }};" id="hero">
+			<div id="title-bar">
+				<div>
+					<h1>{{ title }}</h1>
+					<h2 id="subtitle">{{ subtitle }}</h4>
+				</div>
+				<div>
+					{% for icon in icons %}
+					<a href='{{ icon.url }}' class='symbol' title='{{ icon.id }}'></a>
+					{% endfor %}
+				</div>
+			</div>
+	</div>
+
+	<div id="page-wrap">
+		<div class="card">
+			<div class="card-title">About</div>
+			<div class="card-text">{{ about }}</div>
+		</div>
+		{% for section in sections %}
+		<div class="card">
+			<div class="card-title">{{ section.title }}</div>
+			<!-- Content Type -->
+			{% for element in section.content %}
+			<div class="card-list-element">
+				<div class="card-list-title">{{ element.title }}</div>
+				{% for subtitle in element.subtitles %}
+				<div class="card-list-subtitle">{{ subtitle }}</div>
+				{% endfor %}
+				{% if element.text is defined %}
+				<div class="card-hidden">
+					<div class="card-list-text">{{ element.text }}</div>
+				</div>
+				{% endif %}
+			</div>
+			{% endfor %}
+			<!-- End Content Type -->
+			<!-- Paired Content Type -->
+			{% for element in section.pairedContent %}
+			{% if element.hidden is defined %}
+			<div class="card-list-element small">
+				<b>{{ element.title }}:</b> {{ element.subtitle }}
+				<div class="card-hidden">
+					{% if element.hidden.text is defined %}
+					<div class="card-list-text">{{ element.hidden.text }}</div>
+					{% endif %}
+					{% for pair in element.hidden.pairedContent %}
+					<br />
+					<p>
+						<b>{{ pair.title }}:</b> {{ pair.subtitle }}
+					</p>
+					{% endfor %}
+					{% for button in element.hidden.buttons %}
+					<a  style="color: {{ color }}"class="card-button" href="{{ button.link }}" target="_blank">{{ button.text }}</a>
+					{% endfor %}
+				</div>
+			</div>
+			{% else %}
+			<div class="card-list-element no_select small">
+				<b class="no_select">{{ element.title }}:</b> {{ element.subtitle }}
+			</div>
+			{% endif %}
+			{% endfor %}
+			<!-- End Paired Content -->
+		</div>
+		{% endfor %}
+
+	</div>
+
+		
+</body>
+
+</html>

@@ -1,0 +1,15 @@
+{
+	"title": "Awards",
+	"content": [
+		{
+			"title": "Image RIT Autonomous Drone Challenge",
+			"subtitles": ["2nd Place", "2015"],
+			"text": "My team trained a Haar Classifier to get a Parrot AR Drone to recognize character's from the Jetsons. It used a combination of Node.js and OpenCV."
+		},
+		{
+			"title": "RIT Gobblet AI Tournament",
+			"subtitles": ["2nd Place", "2014"],
+			"text": "My team developed a java program that would play the board game Gobblet. It went on to come in 2nd place in the CS department AI tournament."
+		}
+	]
+}

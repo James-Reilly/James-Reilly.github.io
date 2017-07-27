@@ -1,0 +1,56 @@
+{
+	"title": "Projects",
+	"pairedContent": [
+		{
+			"title": "Jimmified",
+			"subtitle": "A mechanical turk search engine.",
+			"hidden" : {
+				"text": "I worked on the adding the ability to accept payments using Stripe's API.  This involved creating a front end experience and hooking it up to the Golang backend.",
+				"pairedContent": [
+					{
+						"title": "Uses",
+						"subtitle": "Javascript, JQuery, HTML, Handlebars, Golang"
+					}
+				],
+				"buttons": [
+					{
+						"text": "GITHUB",
+						"link": "https://github.com/jimmified"
+					}
+				]
+			}
+		},
+		{
+			"title": "Social Photo App",
+			"subtitle": "The hottest photo sharing app that was never finished.",
+			"hidden" : {
+				"text": "Worked on creating the iOS client for the app.",
+				"pairedContent": [
+					{
+						"title": "Uses",
+						"subtitle": "Swift"
+					}
+				]
+			}
+		},
+		{
+			"title": "Hydroforce",
+			"subtitle": "An application that helps businesses manage their relationships with customers.",
+			"hidden" : {
+				"text": "Worked on this app during the 2015 Meteor Hackathon.",
+				"pairedContent": [
+					{
+						"title": "Uses",
+						"subtitle": "Meteor.js, Javascript, MongoDB, HTML, LESS"
+					}
+				],
+				"buttons": [
+					{
+						"text": "GITHUB",
+						"link": "https://github.com/meteor-hydra/hydraforce"
+					}
+				]
+			}
+		}
+	]
+}

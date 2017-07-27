@@ -1,0 +1,21 @@
+{
+	"title": "Experience",
+	"pairedContent": [
+		{
+			"title": "Proficient",
+			"subtitle": "Java, Javascript, C, Python, HTML, CSS, Typescript"
+		},
+		{
+			"title": "Some Experience",
+			"subtitle": "Android Development, Swift, iOS Development, PHP, Go"
+		},
+		{
+			"title": "Frameworks",
+			"subtitle": "Angular 1/2, Vue, Ionic"
+		},
+		{
+			"title": "Tools",
+			"subtitle": "Linux, Git, VSCode, Atom, IntelliJ, Android Studio, XCode"
+		}
+	]
+}

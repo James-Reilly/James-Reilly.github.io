@@ -1,0 +1,53 @@
+{
+	"title": "Employment",
+	"content": [
+		{
+			"title": "Microsoft",
+			"subtitles": [
+				"Software Engineering Intern",
+				"May 2017 - Present"
+			],
+			"text": "Developing new features for the Office.com team using Angular 2 and measuring their success."
+		},
+		{
+			"title": "Intuit",
+			"subtitles": [
+				"Software Engineering Coop",
+				"January 2017 - May 2017"
+			],
+			"text": "Worked on Java services for the GetData team in the consumer tax group."
+		},
+		{
+			"title": "RIT Production Services",
+			"subtitles": [
+				"Student Web Developer",
+				"August 2016 - December 2016"
+			],
+			"text": "Built responsive and accessible websites for RIT’s colleges and departments using Drupal. "
+		},
+		{
+			"title": "Intuit",
+			"subtitles": [
+				"Software Engineering Coop",
+				"January 2016 - June 2016"
+			],
+			"text": "Researched, designed, and developed prototypes for the internal R&D team in the consumer tax group."
+		},
+		{
+			"title": "RIT Student Government",
+			"subtitles": [
+				"Senior Web Developer",
+				"August 2015 - December 2015"
+			],
+			"text": "Developed and maintained web applications and documented them for open source publication."
+		},
+		{
+			"title": "mySpiderweb",
+			"subtitles": [
+				"Full Stack Web Developer",
+				"June 2015 - August 2015"
+			],
+			"text": "Helped develop the front and back end of a social media aggregation web application."
+		}
+	]
+}
